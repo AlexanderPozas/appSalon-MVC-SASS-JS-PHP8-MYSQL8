@@ -33,6 +33,11 @@ class Router
 
         /**Almacena la url actual */
         $currentUrl = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI'];
+        $queryStringPos = strpos($currentUrl, '?');
+        if(is_numeric($queryStringPos)){
+            $currentUrl = substr($currentUrl, 0, $queryStringPos);
+        }    
+
         /**Verifica el metodo http requerido GET o POST*/
         $method = $_SERVER['REQUEST_METHOD'];
 
