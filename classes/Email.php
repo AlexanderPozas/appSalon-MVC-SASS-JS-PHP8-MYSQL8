@@ -42,7 +42,7 @@ class Email
 
         $contenido = "<html>";
         $contenido .= "<p style = \"background:tomato; padding:20px 10px;\"><strong>Hola " . $this->email . "</strong> has creado tu cuenta en AppSalon, solo debes confirmarla presionando el siguiente enlace</p>";
-        $contenido .= "<p>Presiona Aquí: </p><a href='http://localhost/confirmar-cuenta?token=" .$this->token. "'>Confirmar Cuenta</a>";
+        $contenido .= "<p>Presiona Aquí: </p><a href='http://localhost:3000/confirmar-cuenta?token=" .$this->token. "'>Confirmar Cuenta</a>";
         $contenido .= "<img display:block; height=\"100px\" width=\"100px\" src='". $imgLocation ."'>";
         $contenido .= "<p>Si tu no solicitaste está cuenta, puedes ignorar el mensaje</p>";
         $contenido .= "</html>";
@@ -77,7 +77,7 @@ class Email
 
         $contenido = "<html>";
         $contenido .= "<p style = \"background:tomato; padding:20px 10px;\"><strong>Hola " . $this->nombre . "</strong> has solicitado reestablecer tu Password, sigue el enlace para hacerlo.</p>";
-        $contenido .= "<p>Presiona Aquí: </p><a href='http://localhost/recover?token=" .$this->token. "'>Reestablecer Password</a>";
+        $contenido .= "<p>Presiona Aquí: </p><a href='http://localhost:3000/recover?token=" .$this->token. "'>Reestablecer Password</a>";
         $contenido .= "<img display:block; height=\"100px\" width=\"100px\" src='". $imgLocation ."'>";
         $contenido .= "<p>Si tu no solicitaste este cambio, puedes ignorar el mensaje</p>";
         $contenido .= "</html>";

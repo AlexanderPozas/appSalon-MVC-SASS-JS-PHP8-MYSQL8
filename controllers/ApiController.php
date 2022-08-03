@@ -11,7 +11,6 @@ class ApiController {
     public static function index() {
         $servicios = Servicio::all();
         echo json_encode($servicios);
-
     }
     public static function guardar() {
         /**Almacena la cita y devuelve el ultimo id */
